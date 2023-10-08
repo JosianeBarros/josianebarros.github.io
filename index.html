@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/962722a01a.js" crossorigin="anonymous"></script>
+    <title>Meu Portfólio</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+
+        }
+
+        #header {
+            grid-area: header;
+        }
+
+        #intro {
+            grid-area: intro;
+            padding-left: 4%;
+        }
+
+        #resumo {
+            grid-area: resumo;
+        }
+
+        #projetos {
+            grid-area: projetos;
+        }
+
+        #contato {
+            grid-area: contato;
+        }
+
+        #grid-conteiner {
+            display: grid;
+            grid-template-columns: auto;
+            grid-template-areas: 'intro'
+                                 'resumo'
+                                 'projetos'
+                                 'contato';
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f0f0f0;
+            max-width: 100%;
+            max-height: 100%;
+        }
+        
+        h3 {
+            color: #000;
+        }
+
+        .conteiner {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: #667;
+        }
+
+        .link {
+            font-size: 26px;
+            float: right;
+            padding-right: 10px;
+        }
+
+
+        .tech {
+            margin: 10px;
+            padding: 15px;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            color: #333;
+            font-size: 0.9em;
+        }
+        
+        .projeto {
+            width: 100%;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        
+        .projeto img {
+            width: 40%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+        
+        .projeto p {
+            padding: 10px;
+            font-size: 18px;
+        }
+
+        div {
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+        }
+        
+        #sobre {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+
+        @media screen and (max-width: 700px) {
+          #grid-conteiner {
+              grid-template-columns: 100%;
+              grid-template-areas: 'intro'
+                                   'resumo'
+                                   'projetos'
+                                   'contato';
+          }
+
+          .projeto img {
+            width: 90%;
+            height: auto;
+            margin: 10px auto;
+            display: block;
+        }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div id="grid-conteiner">
+        <div id="intro" class="conteiner">
+            <p>Hello, I'm</p>
+            <h1>Josiane Barros</h1>
+            <p>Desenvolvedora Front-end e Back-end</p>
+            <a href="https://github.com/JosianeBarros" class="link"><i class="fab fa-github" style="color: #000000;"></i></a>
+            <a href="https://www.linkedin.com/in/josianebarros03/" class="link"><i class="fa-brands fa-linkedin" style="color: #000000;"></i></a>
+            <a href="https://medium.com/@josianebarros" class="link"><i class="fa-brands fa-medium" style="color: #000000;"></i></a>
+        </div>
+
+        <div id="resumo" class="conteiner">
+            <div>
+                <h3>Sobre mim</h3>
+                <p id="sobre">Como uma desenvolvedora em início de carreira, estou ansiosa para aplicar meus conhecimentos em várias linguagens de programação. Tenho familiaridade com HTML, CSS e JavaScript para criar interfaces de usuário interativas, bem como com PHP, Python e C para desenvolver aplicações server-side. Além disso, tenho uma compreensão básica de bancos de dados, o que me permite criar, consultar e manipular bancos de dados. Embora eu esteja no início da minha carreira, minha capacidade de trabalhar tanto no front-end quanto no back-end me dá uma visão completa do desenvolvimento web.</p>
+            </div>
+
+            <h3>Tech Stack</h3>
+            <div style="display: flex; flex-wrap: wrap;">
+                <span class="tech"><i class="fa-brands fa-html5" style="color: #e34f26;"></i> HTML5</span>
+                <span class="tech"><i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS3</span>
+                <span class="tech"><i class="fa-brands fa-js-square" style="color: #f0db4f;"></i> JavaScript</span>
+                <span class="tech"><i class="fa-brands fa-php" style="color: #8993be;"></i> PHP</span>
+                <span class="tech"><i class="fa-brands fa-laravel" style="color: #f55247;"></i> Laravel</span>
+                <span class="tech"><i class="fa-brands fa-python" style="color: #3776ab;"></i> Python</span>
+                <span class="tech"><i class="fa-brands fa-cuttlefish"></i> C</span>
+                <span class="tech"><i class="fa-solid fa-database"></i> SQL</span>
+                <span class="tech"><i class="fa-brands fa-linux"></i> Linux</span>
+            </div>
+        </div>
+
+        <div id="projetos" class="conteiner">
+            <h3>Projetos</h3>
+            <div class="projeto">
+                <p>Sistema de cadastro de produtos.</p>
+                <img src="imagens/imagem01.png">
+                <img src="imagens/imagem011.png">
+                
+                <p>Sistema de cadastro de livros.</p>
+                <img src="imagens/imagem02.png">
+                <img src="imagens/imagem021.png">
+            </div>
+        </div>
+
+        <div id="contato" class="conteiner">
+            <h3>Contato</h3>
+            <p>E-mail: josianebarrosfreelancer@gmail.com</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/josianebarros03/">Josiane Barros</a></p>
+            <p>GitHub: <a href="https://github.com/JosianeBarros">Josiane Barros</a></p>
+        </div>
+        
+    </div>
+</body>
+</html>
